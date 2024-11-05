@@ -1,0 +1,23 @@
+@import '../../styles/variables.sass'
+
+.error-message
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  gap: 70px
+  text-align: center
+  height: 100vh
+  padding-left: 117px
+  padding-top: 100px
+  // margin-left: 10vw
+  &__number
+    color: $primary-color
+    font-size: clamp(8rem, 0.6136rem + 15.1515vw, 14.25rem)
+    font-weight: 700
+  &__text
+    color: $primary-color
+    font-size: clamp(1rem, -0.4773rem + 3.0303vw, 2.25rem)
+  &__link
+    color: $black
+    font-size: clamp(0.875rem, 0.5795rem + 0.6061vw, 1.125rem)
