@@ -1,3 +1,4 @@
+import React from 'react'
 import './Header.sass'
 import Logo from '../../assets/logo.svg'
 import { NavLink } from 'react-router-dom'
