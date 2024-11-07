@@ -45,8 +45,7 @@ function DailyActivityChart() {
               orientation='right'
               axisLine={false}
               tickLine={false}
-              tickFormatter={(value) => `${Math.round(value)}`}
-              domain={['dataMin - 1', 'dataMax + 1']}
+              domain={['dataMin - 1', 'dataMax + 2']}
             />
             <YAxis
               hide={true}
