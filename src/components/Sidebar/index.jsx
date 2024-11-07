@@ -12,18 +12,26 @@ function Sidebar() {
     <aside className='sidebar'>
       <nav className='sidebar-nav'>
         <ul className='sidebar-nav-list'>
-          <NavLink to='/fitness' className='sidebar-nav-list-link'>
-            <img src={LogoFitness} alt='Fitness' />
-          </NavLink>
-          <NavLink to='/cycling' className='sidebar-nav-list-link'>
-            <img src={LogoCycling} alt='Cycling' />
-          </NavLink>
-          <NavLink to='/swim' className='sidebar-nav-list-link'>
-            <img src={LogoSwim} alt='Swim' />
-          </NavLink>
-          <NavLink to='/meditation' className='sidebar-nav-list-link'>
-            <img src={LogoMeditation} alt='Meditation' />
-          </NavLink>
+          <li className='sidebar-nav-list-link'>
+            <NavLink to='/fitness'>
+              <img src={LogoFitness} alt='Fitness' />
+            </NavLink>
+          </li>
+          <li className='sidebar-nav-list-link'>
+            <NavLink to='/cycling'>
+              <img src={LogoCycling} alt='Cycling' />
+            </NavLink>
+          </li>
+          <li className='sidebar-nav-list-link'>
+            <NavLink to='/swim'>
+              <img src={LogoSwim} alt='Swim' />
+            </NavLink>
+          </li>
+          <li className='sidebar-nav-list-link'>
+            <NavLink to='/meditation'>
+              <img src={LogoMeditation} alt='Meditation' />
+            </NavLink>
+          </li>
         </ul>
       </nav>
       <p className='sidebar-text'>Copyright, SportSee {currentYear}</p>

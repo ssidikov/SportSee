@@ -1,15 +1,17 @@
-@import ../../styles/variables.sass
-
 .profile
-  // padding-left: 15.5vw
-  // padding-top: 15.5vw
-  &-title
-    font-size: clamp(1.5rem, -0.2727rem + 3.6364vw, 3rem)
-    font-weight: 500
-    line-height: 24px
-    margin-bottom: 41px
-    &__username
-      color: $primary-color
-  &-description
-    font-size: clamp(0.875rem, 0.5795rem + 0.6061vw, 1.125rem)
-    font-weight: 400
+    display: flex
+    flex-direction: column
+    width: 100%
+
+    &-title
+        font-size: 48px
+        margin-bottom: 0
+
+.title--red
+    color: #FF0101
+
+.erreur
+    margin: 100px
+    color: red
+    font-weight: 600
+    font-size: 20px
