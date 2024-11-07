@@ -13,30 +13,34 @@ function GeneralInfosZone() {
   const userDietDatas = getUserKeyDatas(data)
   const dietFormatedDatas = getUserDietDatas(userDietDatas)
 
-  return error ? (
-    <span className='erreur'>Erreur lors du chargement des données</span>
-  ) : userDietDatas ? (
-    <section className='charts__diet'>
-      <section className='charts'>
+  if (error) {
+    return <span className='general-infos-zone__error'>Erreur lors du chargement des données</span>
+  }
+
+  if (!userDietDatas) return null
+
+  return (
+    <section className='general-infos-zone'>
+      <section className='general-infos-zone__charts'>
         <DailyActivityChart />
-        <section className='smallsCharts'>
+        <section className='general-infos-zone__smalls-charts'>
           <AverageSessionChart />
           <PerformanceChart />
           <ScoreChart />
         </section>
       </section>
-      <section className='diet-zone'>
+
+      <section className='general-infos-zone__diet'>
         {dietFormatedDatas.map((dietInfo) => (
-          <div key={dietInfo.name}>
-            <DietInfos
-              dietInfoValue={dietInfo.value}
-              categoryIndex={dietFormatedDatas.indexOf(dietInfo)}
-            />
-          </div>
+          <DietInfos
+            key={dietInfo.name}
+            dietInfoValue={dietInfo.value}
+            categoryIndex={dietFormatedDatas.indexOf(dietInfo)}
+          />
         ))}
       </section>
     </section>
-  ) : null
+  )
 }
 
 export default GeneralInfosZone

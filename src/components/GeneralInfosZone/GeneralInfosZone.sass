@@ -1,43 +1,57 @@
-.charts__diet
+@import '../../styles/variables.sass'
+
+.general-infos-zone
     display: flex
     flex-direction: row
     margin-top: 50px
     margin-bottom: 100px
+    gap: 50px
 
-.charts
-    display: flex
-    flex-direction: column
-    margin-right: 50px
-    width: 70%
+    &__charts
+        display: flex
+        flex-direction: column
+        width: 70%
 
-.smallsCharts
-    display: flex
-    justify-content: space-between
-    margin-top: 30px
-    flex-wrap: wrap
-    gap: 24px
+    &__smalls-charts
+        display: flex
+        justify-content: space-between
+        margin-top: 30px
+        flex-wrap: wrap
+        gap: 24px
 
-.diet-zone
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    flex-wrap: wrap
-    gap: 39px
+    &__diet
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        flex-wrap: wrap
+        gap: 39px
 
-.erreur
-    color: red
-    font-weight: 600
-    font-size: 20px
+    &__error
+        color: red
+        font-weight: 600
+        font-size: 20px
 
 @media (max-width: 1300px)
-    .charts__diet
+    .general-infos-zone
         flex-direction: column
+
+        &__charts
+            width: 95%
+
+        &__diet
+            width: 95%
+            flex-direction: row
+            margin-top: 50px
+
+@media (max-width: 768px)
+    .general-infos-zone
+        gap: 20px
+        margin-top: 30px
+
+    .general-infos-zone__charts,
+    .general-infos-zone__diet
         width: 100%
 
-    .charts
-        width: 95%
-
-    .diet-zone
-        margin-top: 50px
-        width: 95%
-        flex-direction: row
+    .general-infos-zone__smalls-charts
+        justify-content: center
+        gap: 16px
