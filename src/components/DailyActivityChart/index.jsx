@@ -40,7 +40,7 @@ function DailyActivityChart() {
     <span className='erreur'>Erreur</span>
   ) : (
     <div className='barChart'>
-      <p className='barChart-title'>Activité Quotidienne</p>
+      <p className='barChart-title'>Activité quotidienne</p>
       <ResponsiveContainer width='100%' height='100%'>
         <BarChart
           data={sessions}

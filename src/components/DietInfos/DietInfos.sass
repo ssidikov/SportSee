@@ -1,13 +1,15 @@
 .diet-container
     display: flex
-    max-width: 300px
-    width: 100%
+    // max-width: 258px
+    width: 258px
+    // width: 100%
     height: 125px
     background-color: #FBFBFB
     align-items: center
-    justify-content: space-evenly
+    // justify-content: space-evenly
+    gap: 24px
     border-radius: 5px
-    padding: 20px
+    padding: 32px 50px 32px 32px
     box-sizing: border-box
 
 .diet-icon
@@ -16,12 +18,12 @@
 
 .diet-value
     color: #282D30
-    font-size: 20px
+    font-size: clamp(0.875rem, 0.4318rem + 0.9091vw, 1.25rem)
     font-weight: 700
     margin: 0
 
 .diet-categorie
     color: #74798C
-    font-size: 14px
+    font-size: clamp(0.6875rem, 0.4659rem + 0.4545vw, 0.875rem)
     font-weight: 600
     margin: 0

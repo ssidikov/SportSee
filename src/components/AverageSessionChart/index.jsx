@@ -1,5 +1,5 @@
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from 'recharts'
-import './AverageTimeSession.sass'
+import './AverageSessionChart.sass'
 import { useFetch } from '../../utils/hooks'
 import { getAverageInfos } from '../../services/Api'
 import { getUserSessions } from '../../utils/dataUtils'
@@ -9,31 +9,32 @@ function AverageSessionChart() {
   const sessions = getUserSessions(data)
   const weekDays = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
 
-  const customToolTip = ({ active, payload }) => {
+  const renderCustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
-        <div
-          className='custom-tooltip'
-          style={{
-            backgroundColor: 'white',
-            color: 'black',
-            textAlign: 'center',
-          }}>
-          <p className='time__label'>{`${payload[0].value}min`}</p>
+        <div className='average-session-chart__tooltip'>
+          <p className='average-session-chart__tooltip-text'>{`${payload[0].value}min`}</p>
         </div>
       )
     }
+    return null
   }
 
   return !sessions || error ? (
-    <span className='erreur'>Données non conformes</span>
+    <span className='average-session-chart__error'>Données non conformes</span>
   ) : (
-    <div className='lineChart__container'>
-      <p className='lineChart__title'>Durée moyenne des sessions</p>
+    <div className='average-session-chart'>
+      <p className='average-session-chart__title'>Durée moyenne des sessions</p>
       <ResponsiveContainer width='100%' height='100%'>
-        <LineChart data={sessions} style={{ backgroundColor: '#FF0000', borderRadius: '5px' }}>
+        <LineChart
+          data={sessions}
+          className='average-session-chart__chart'
+          margin={{ top: 35, right: 0, left: 0, bottom: 0 }}>
           <defs>
-            <linearGradient id='linear'>
+            <clipPath id='clip-path'>
+              <rect x='0' y='0' width='100%' height='100%' />
+            </clipPath>
+            <linearGradient id='linear-gradient' x1='0' y1='0' x2='1' y2='0'>
               <stop offset='0%' stopColor='rgba(255, 255, 255, 0.4)' />
               <stop offset='100%' stopColor='rgba(255, 255, 255, 1)' />
             </linearGradient>
@@ -46,12 +47,12 @@ function AverageSessionChart() {
             tick={{ fill: 'rgba(255, 255, 255, 0.7)' }}
             padding={{ left: 10, right: 10 }}
           />
-          <Tooltip content={customToolTip} />
+          <Tooltip content={renderCustomTooltip} />
           <Line
             type='monotone'
             dataKey='sessionLength'
-            stroke='url(#linear)'
-            strokeWidth={2}
+            stroke='url(#linear-gradient)'
+            strokeWidth={3}
             activeDot={{ r: 4 }}
             dot={false}
           />
