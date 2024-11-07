@@ -30,7 +30,7 @@ function GeneralInfosZone() {
           <div key={dietInfo.name}>
             <DietInfos
               dietInfoValue={dietInfo.value}
-              categorie={dietFormatedDatas.indexOf(dietInfo)}
+              categoryIndex={dietFormatedDatas.indexOf(dietInfo)}
             />
           </div>
         ))}
