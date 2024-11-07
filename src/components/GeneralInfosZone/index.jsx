@@ -1,7 +1,7 @@
 import './GeneralInfosZone.sass'
 import DailyActivityChart from '../DailyActivityChart'
 import AverageSessionChart from '../AverageSessionChart'
-import PerformanceChart from '../PerformanceChart/PerformanceChart'
+import PerformanceChart from '../PerformanceChart/index'
 import ScoreChart from '../ScoreChart'
 import DietInfos from '../DietInfos'
 import { useFetch } from '../../utils/hooks'
