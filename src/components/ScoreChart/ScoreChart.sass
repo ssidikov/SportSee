@@ -1,44 +1,44 @@
-.scoreChart__Container
+.score-chart
     width: 258px
-    // width: 30%
     height: 263px
     background-color: #FBFBFB
     position: relative
     border-radius: 5px
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02)
 
-.scoreChart-title
-    position: absolute
-    color: #20253A
-    font-size: 15px
-    margin-left: 40px
-    margin-top: 30px
-    font-weight: 700
+    &__title
+        position: absolute
+        color: #20253A
+        font-size: 15px
+        margin: 30px 0 0 40px
+        font-weight: 500
 
-.text-circle
-    width: 130px
-    height: 130px
-    background-color: white
-    position: absolute
-    border-radius: 50%
-    top: 50%
-    left: 50%
-    translate: -50% -50%
-    align-content: center
+    &__text-circle
+        width: 130px
+        height: 130px
+        background-color: #FFFFFF
+        position: absolute
+        border-radius: 50%
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        display: flex
+        align-items: center
+        justify-content: center
 
-.score
-    color: #74798C
-    width: 70px
-    margin: auto
-    text-align: center
-    font-size: 16px
+    &__text
+        color: #74798C
+        max-width: 70px
+        text-align: center
+        font-size: 16px
 
-    &--bold
-        color: #282D30
+        &--bold
+            color: #282D30
+            font-weight: 600
+            font-size: 26px
+
+    &__error
+        color: #FF0000
         font-weight: 600
-        font-size: 26px
-
-.erreur
-    color: red
-    font-weight: 600
-    font-size: 20px
+        font-size: 20px
+        text-align: center
