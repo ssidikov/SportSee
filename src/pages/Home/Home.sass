@@ -1,43 +1,49 @@
 @use '../../styles/variables' as *
 
 .home
-  // padding-left: 15.5vw
-  // padding-top: 15.5vw
-  &-title
-    font-size: clamp(1.5rem, -0.2727rem + 3.6364vw, 3rem)
-    font-weight: 500
-    line-height: 24px
-    margin-bottom: 41px
-    // &__username
-    //   color: $primary-color
-  &__user-container
+  display: flex
+  flex-direction: column
+  padding: 5vw
+  border-radius: 10px
+
+  &__title
+    font-size: clamp(1.5rem, 2vw, 3rem)
+    font-weight: 600
+    margin-bottom: 2rem
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5)
+
+  &__user-card
     display: flex
     align-items: center
-    margin-bottom: 41px
-    background-color: $primary-color
-    width: 200px
-    padding: 20px
-    border-radius: 5px
-    font-size: clamp(0.875rem, 0.5795rem + 0.6061vw, 1.125rem)
-    font-weight: 400
-    color: $white
+    justify-content: flex-start
+    width: 250px
+    padding: 1rem
+    background: $primary-color
+    border-radius: 8px
     text-decoration: none
+    color: $white
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)
+    transition: transform 0.3s, background-color 0.3s
+
     &:hover
-      cursor: pointer
+      transform: scale(1.05)
       background-color: $primary-color-hover
-    // &-avatar
-    //   width: 50px
-    //   height: 50px
-    //   border-radius: 50%
-    //   margin-right: 20px
-    // &-info
-    //   display: flex
-    //   flex-direction: column
-    //   &__username
-    //     font-size: clamp(1rem, 0.4545rem + 1.8182vw, 1.5rem)
-    //     font-weight: 500
-    //     margin-bottom: 5px
-    // &-link
-    //   font-size: clamp(0.875rem, 0.5795rem + 0.6061vw, 1.125rem)
-    //   font-weight: 400
-    //   color: $white
+
+  &__user-avatar
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    margin-right: 1rem
+    border: 2px solid $white
+
+  &__user-info
+    display: flex
+    flex-direction: column
+
+  &__user-name
+    font-size: 1.25rem
+    font-weight: 600
+
+  &__user-status
+    font-size: 0.875rem
+    color: $background-color
