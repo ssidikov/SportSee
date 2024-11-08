@@ -10,28 +10,38 @@ function PerformanceChart() {
 
   const userPerformance = getUserPerfomance(data, kinds)
 
-  return !userPerformance || error ? (
-    <span className='erreur'>Données non conformes</span>
-  ) : (
-    <div className='radarChart'>
-      <ResponsiveContainer
-        width='100%'
-        height='100%'
-        style={{ backgroundColor: '#282D30', borderRadius: '5px' }}>
+  if (error) {
+    return <span className='performance-chart__error'>Données non conformes</span>
+  }
+
+  if (!userPerformance) {
+    return null
+  }
+
+  return (
+    <div className='performance-chart'>
+      <ResponsiveContainer width='100%' height='100%'>
         <RadarChart
           cx='50%'
           cy='50%'
           outerRadius='80%'
           data={userPerformance}
-          margin={{
-            top: 15,
-            right: 15,
-            left: 15,
-            bottom: 15,
-          }}>
-          <PolarGrid />
-          <PolarAngleAxis dataKey='kind' stroke='#FFF' fontSize={12} tickLine={false} />
-          <Radar dataKey='value' stroke='#8884d8' fill='#FF0101' fillOpacity={0.6} />
+          className='performance-chart__container'>
+          <PolarGrid className='performance-chart__grid' />
+          <PolarAngleAxis
+            dataKey='kind'
+            stroke='#FFF'
+            fontSize={12}
+            tickLine={false}
+            className='performance-chart__axis'
+          />
+          <Radar
+            dataKey='value'
+            stroke='#8884d8'
+            fill='#FF0101'
+            fillOpacity={0.7}
+            className='performance-chart__radar'
+          />
         </RadarChart>
       </ResponsiveContainer>
     </div>
