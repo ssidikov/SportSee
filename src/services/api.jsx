@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { USE_API } from './config.js'
+import { USE_API } from './config.jsx'
 import {
   USER_MAIN_DATA,
   USER_ACTIVITY,
