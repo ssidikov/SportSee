@@ -15,8 +15,7 @@ function App() {
         <div className='app-container'>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/profile/:userId' element={<Profile />} />{' '}
-            {/* Изменили путь с '/profile' на '/profile/:userId' */}
+            <Route path='/profile' element={<Profile />} />
             <Route path='*' element={<Error404 />} />
           </Routes>
         </div>

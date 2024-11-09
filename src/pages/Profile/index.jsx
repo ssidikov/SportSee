@@ -12,7 +12,7 @@ function Profile() {
     <span className='erreur'>Erreur lors du chargement des données</span>
   ) : (
     <main className='profile'>
-      <section className='title__congrat'>
+      <section className='title'>
         <h1 className='profile-title'>
           Bonjour <span className='title--red'>{name}</span>
         </h1>

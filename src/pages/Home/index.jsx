@@ -25,7 +25,7 @@ function Home() {
         <p className='home__user-subtitle'>Cliquez sur la carte pour voir le profil complet.</p>
 
         <div className='home__user-cards'>
-          <Link to='/profile/18' className='home__user-card'>
+          <Link to='/profile' className='home__user-card'>
             <img src={UserAvatar} alt='User Avatar' className='home__user-avatar' />
             <div className='home__user-info'>
               <p className='home__user-name'>{name || error}</p>
