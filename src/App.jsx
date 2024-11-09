@@ -1,3 +1,4 @@
+// App.jsx
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
@@ -14,7 +15,8 @@ function App() {
         <div className='app-container'>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/profile' element={<Profile />} />
+            <Route path='/profile/:userId' element={<Profile />} />{' '}
+            {/* Изменили путь с '/profile' на '/profile/:userId' */}
             <Route path='*' element={<Error404 />} />
           </Routes>
         </div>
