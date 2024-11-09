@@ -1,4 +1,3 @@
-// Home.jsx
 import './Home.sass'
 import { Link } from 'react-router-dom'
 import UserAvatar from '../../assets/avatar.svg'
@@ -26,19 +25,10 @@ function Home() {
         <p className='home__user-subtitle'>Cliquez sur la carte pour voir le profil complet.</p>
 
         <div className='home__user-cards'>
-          {/* Кнопка для пользователя с id 18 */}
           <Link to='/profile/18' className='home__user-card'>
             <img src={UserAvatar} alt='User Avatar' className='home__user-avatar' />
             <div className='home__user-info'>
               <p className='home__user-name'>{name || error}</p>
-            </div>
-          </Link>
-
-          {/* Кнопка для пользователя с id 12 */}
-          <Link to='/profile/12' className='home__user-card'>
-            <img src={UserAvatar} alt='User Avatar' className='home__user-avatar' />
-            <div className='home__user-info'>
-              <p className='home__user-name'>Karl</p>
             </div>
           </Link>
         </div>
