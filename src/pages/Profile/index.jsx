@@ -16,7 +16,7 @@ function Profile() {
         <h1 className='profile-title'>
           Bonjour <span className='title--red'>{name}</span>
         </h1>
-        <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+        <p className='profile-text'>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
       </section>
       <GeneralInfosZone />
     </main>

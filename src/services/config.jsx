@@ -14,7 +14,7 @@ export function useApiConfig() {
   return useContext(ApiContext)
 }
 
-export let USE_API = false
+export let USE_API = true
 
 // Function for changing the value USE_API
 export function setUseApi(value) {

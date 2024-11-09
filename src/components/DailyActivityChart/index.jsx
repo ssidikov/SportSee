@@ -34,8 +34,8 @@ function DailyActivityChart() {
     <span className='daily-activity-chart__error'>Erreur</span>
   ) : (
     <div className='daily-activity-chart'>
-      <p className='daily-activity-chart__title'>Activité quotidienne</p>
       <div className='daily-activity-chart__container'>
+        <p className='daily-activity-chart__title'>Activité quotidienne</p>
         <ResponsiveContainer width='100%' height='100%'>
           <BarChart data={sessions} margin={{ top: 30, right: 30, left: 20, bottom: 5 }}>
             <CartesianGrid strokeDasharray='3' vertical={false} />
