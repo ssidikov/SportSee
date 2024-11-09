@@ -1,7 +1,6 @@
-// config.js
 import React, { createContext, useContext, useState } from 'react'
 
-// Создание контекста для источника данных
+// Creating a context for a data source
 const ApiContext = createContext()
 
 export function ApiProvider({ children }) {
@@ -10,14 +9,14 @@ export function ApiProvider({ children }) {
   return <ApiContext.Provider value={{ useApi, setUseApi }}>{children}</ApiContext.Provider>
 }
 
-// Хук для использования контекста
+// hook to use context
 export function useApiConfig() {
   return useContext(ApiContext)
 }
 
-export let USE_API = true
+export let USE_API = false
 
-// Функция для изменения значения USE_API
+// Function for changing the value USE_API
 export function setUseApi(value) {
   USE_API = value
 }
