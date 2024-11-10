@@ -32,7 +32,7 @@ Ensure you have **Node.js (v14 or higher)** and **npm/yarn** installed.
 2. **Navigate to the project directory**:
 
    ```bash
-   cd sportsee-profile
+   cd SportSee
    ```
 
 3. **Install dependencies**:
@@ -43,7 +43,30 @@ Ensure you have **Node.js (v14 or higher)** and **npm/yarn** installed.
    yarn install
    ```
 
-4. **Start the development server**:
+4. **Clone the backend repository** (if you're using the backend):
+
+   ```bash
+   git clone https://github.com/ssidikov/SportSee-backend.git
+   ```
+
+5. **Navigate to the backend directory** and install dependencies:
+
+   ```bash
+   cd SportSee-backend
+   npm install
+   or
+   yarn install
+   ```
+
+6. **Start the backend server**:
+
+   ```bash
+   npm dev
+   or
+   yarn dev
+   ```
+
+7. **Start the frontend development server** (in the main project directory):
 
    ```bash
    npm start
@@ -51,7 +74,7 @@ Ensure you have **Node.js (v14 or higher)** and **npm/yarn** installed.
    yarn start
    ```
 
-   Visit [http://localhost:3000](http://localhost:3000) to view the app.
+   If you are using the backend, visit [http://localhost:3001](http://localhost:3001) to view the app. Otherwise, visit [http://localhost:3000](http://localhost:3000).
 
 ## 🛠️ Technologies Used
 
@@ -77,7 +100,7 @@ Ensure you have **Node.js (v14 or higher)** and **npm/yarn** installed.
 
 ### Mock Data
 
-Development is supported by a `serviceAPIMock` class that mimics API calls with the same response structure as the actual backend.
+Development is supported by a `serviceAPIMock.js` class that mimics API calls with the same response structure as the actual backend.
 
 ## 📊 Data Handling
 
