@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import UserAvatar from '../../assets/avatar.svg'
 import { setUseApi } from '../../services/config'
 import ApiToggleSwitch from '../../components/ApiToggleSwitch'
-import { getGeneralDatas } from '../../services/Api'
+import { getGeneralDatas } from '../../services/api'
 import { useFetch } from '../../utils/hooks'
 import { getUserFirstName } from '../../utils/dataUtils'
 

@@ -1,7 +1,7 @@
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
 import './ScoreChart.sass'
 import { useFetch } from '../../utils/hooks'
-import { getGeneralDatas } from '../../services/Api'
+import { getGeneralDatas } from '../../services/api'
 import { getUserScore } from '../../utils/dataUtils'
 
 function ScoreChart() {

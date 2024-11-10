@@ -1,6 +1,6 @@
 import GeneralInfosZone from '../../components/GeneralInfosZone'
 import './Profile.sass'
-import { getGeneralDatas } from '../../services/Api'
+import { getGeneralDatas } from '../../services/api'
 import { useFetch } from '../../utils/hooks'
 import { getUserFirstName } from '../../utils/dataUtils'
 

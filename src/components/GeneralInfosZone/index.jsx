@@ -5,7 +5,7 @@ import PerformanceChart from '../PerformanceChart/index'
 import ScoreChart from '../ScoreChart'
 import DietInfos from '../DietInfos'
 import { useFetch } from '../../utils/hooks'
-import { getGeneralDatas } from '../../services/Api'
+import { getGeneralDatas } from '../../services/api'
 import { getUserDietDatas, getUserKeyDatas } from '../../utils/dataUtils'
 
 function GeneralInfosZone() {

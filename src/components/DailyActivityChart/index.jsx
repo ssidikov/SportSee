@@ -10,7 +10,7 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import { useFetch } from '../../utils/hooks'
-import { getActivityInfos } from '../../services/Api'
+import { getActivityInfos } from '../../services/api'
 import { getUserDay, getUserSessions } from '../../utils/dataUtils'
 
 function DailyActivityChart() {

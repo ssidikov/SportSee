@@ -1,7 +1,7 @@
 import './PerformanceChart.sass'
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts'
 import { useFetch } from '../../utils/hooks'
-import { getPerformanceInfos } from '../../services/Api'
+import { getPerformanceInfos } from '../../services/api'
 import { getUserPerfomance } from '../../utils/dataUtils'
 
 function PerformanceChart() {

@@ -1,7 +1,7 @@
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from 'recharts'
 import './AverageSessionChart.sass'
 import { useFetch } from '../../utils/hooks'
-import { getAverageInfos } from '../../services/Api'
+import { getAverageInfos } from '../../services/api'
 import { getUserSessions } from '../../utils/dataUtils'
 
 function AverageSessionChart() {
