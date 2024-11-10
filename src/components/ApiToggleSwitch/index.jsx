@@ -1,6 +1,5 @@
-// components/ApiToggleSwitch.jsx
 import React, { useState } from 'react'
-import './ApiToggleSwitch.sass' // Подключение файла стилей
+import './ApiToggleSwitch.sass'
 
 function ApiToggleSwitch({ setUseApi }) {
   const [useApi, setUseApiState] = useState(true)

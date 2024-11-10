@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# SportSee
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SportSee is a dynamic sports coaching startup. This project focuses on building a responsive user profile page using **React**, where users can track their activity, including session counts and calories burned.
 
-## Available Scripts
+## 📋 Table of Contents
 
-In the project directory, you can run:
+- [Project Overview](#project-overview)
+- [🚀 Installation](#installation)
+- [🛠️ Technologies Used](#technologies-used)
+- [💻 Usage](#usage)
+- [🌐 API Information](#api-information)
+- [📊 Data Handling](#data-handling)
 
-### `yarn start`
+## Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This React-based project implements a user profile page that visualizes user activity data through interactive charts. The app connects to a Node.js backend for data retrieval.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Installation
 
-### `yarn test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ensure you have **Node.js (v14 or higher)** and **npm/yarn** installed.
 
-### `yarn build`
+### Steps
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/ssidikov/SportSee.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Navigate to the project directory**:
 
-### `yarn eject`
+   ```bash
+   cd sportsee-profile
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Install dependencies**:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   or
+   yarn install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Start the development server**:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm start
+   or
+   yarn start
+   ```
 
-## Learn More
+   Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🛠️ Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **React** – Core library for building the UI
+- **React Router** – Client-side routing
+- **Recharts** – For creating responsive charts
+- **Sass** – Preprocessor for styling
+- **Axios** – For HTTP requests
 
-### Code Splitting
+## 💻 Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- The app pulls user data from a backend server and visualizes it with charts.
+- Switch between API and mock data using the **ApiToggleSwitch** component for development and testing flexibility.
 
-### Analyzing the Bundle Size
+## 🌐 API Information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Available Endpoints
 
-### Making a Progressive Web App
+- **`GET /user/:id`** – Retrieves main user information
+- **`GET /user/:id/activity`** – Retrieves user activity data
+- **`GET /user/:id/average-sessions`** – Retrieves average session data
+- **`GET /user/:id/performance`** – Retrieves user performance data
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Mock Data
 
-### Advanced Configuration
+Development is supported by a `serviceAPIMock` class that mimics API calls with the same response structure as the actual backend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📊 Data Handling
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Custom **`useFetch()`** hook handles data fetching.
+- API responses are standardized and formatted before being rendered to ensure consistent data handling across the app.

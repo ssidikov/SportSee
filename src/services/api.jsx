@@ -5,7 +5,7 @@ import {
   USER_ACTIVITY,
   USER_AVERAGE_SESSIONS,
   USER_PERFORMANCE,
-} from '../data/data.js'
+} from '../mockData/serviceAPIMock'
 
 async function getGeneralDatas(id) {
   if (USE_API) {
