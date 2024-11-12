@@ -1,4 +1,4 @@
-# SportSee ![logo](./src/assets/logo.svg)
+# ![logo](./src/assets/logo.svg)
 
 SportSee is a dynamic sports coaching startup. This project focuses on building a responsive user profile page using **React**, where users can track their activity, including session counts and calories burned.
 
