@@ -55,7 +55,7 @@ export function getUserDay(session) {
  * @param {Array} kinds - Array of kind labels for performance data.
  * @returns {Array|null} Formatted performance data array or null if data is absent.
  */
-export function getUserPerfomance(data, kinds) {
+export function getUserPerformance(data, kinds) {
   return (
     data?.data?.data?.map((d) => ({
       value: d.value,

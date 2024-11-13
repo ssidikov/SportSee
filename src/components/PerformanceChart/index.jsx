@@ -2,13 +2,13 @@ import './PerformanceChart.sass'
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts'
 import { useFetch } from '../../utils/hooks'
 import { getPerformanceInfos } from '../../services/api'
-import { getUserPerfomance } from '../../utils/dataUtils'
+import { getUserPerformance } from '../../utils/dataUtils'
 
 function PerformanceChart() {
   const { data, error } = useFetch(getPerformanceInfos)
   const kinds = ['Intensité', 'Vitesse', 'Force', 'Endurance', 'Energie', 'Cardio']
 
-  const userPerformance = getUserPerfomance(data, kinds)
+  const userPerformance = getUserPerformance(data, kinds)
 
   if (error) {
     return <span className='performance-chart__error'>Données non conformes</span>
