@@ -11,7 +11,7 @@ import { getUserDietDatas, getUserKeyDatas } from '../../utils/dataUtils'
 function GeneralInfosZone() {
   const { data, error } = useFetch(getGeneralDatas)
   const userDietDatas = getUserKeyDatas(data)
-  const dietFormatedDatas = getUserDietDatas(userDietDatas)
+  const dietFormattedDatas = getUserDietDatas(userDietDatas)
 
   if (error) {
     return <span className='general-infos-zone__error'>Erreur lors du chargement des données</span>
@@ -31,11 +31,11 @@ function GeneralInfosZone() {
       </section>
 
       <section className='general-infos-zone__diet'>
-        {dietFormatedDatas.map((dietInfo) => (
+        {dietFormattedDatas.map((dietInfo) => (
           <DietInfos
             key={dietInfo.name}
             dietInfoValue={dietInfo.value}
-            categoryIndex={dietFormatedDatas.indexOf(dietInfo)}
+            categoryIndex={dietFormattedDatas.indexOf(dietInfo)}
           />
         ))}
       </section>
