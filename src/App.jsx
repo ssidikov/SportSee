@@ -1,6 +1,6 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import Sidebar from './components/Sidebar'
+import Sidebar from './pages/Sidebar'
 import Error404 from './pages/Error-404'
 import Home from './pages/Home'
 import Profile from './pages/Profile'
