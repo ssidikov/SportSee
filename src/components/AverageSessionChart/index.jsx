@@ -13,7 +13,7 @@ function AverageSessionChart() {
     if (active && payload && payload.length) {
       return (
         <div className='average-session-chart__tooltip'>
-          <p className='average-session-chart__tooltip-text'>{`${payload[0].value}min`}</p>
+          <p className='average-session-chart__tooltip-text'>{`${payload[0].value} min`}</p>
         </div>
       )
     }
