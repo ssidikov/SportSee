@@ -35,8 +35,11 @@
     padding: 10px
 
   &__icon
-    width: 4.444vw
-    height: auto
+    width: 64px
+    height: 64px
+    @media (max-width: 780px)
+      width: 48px
+      height: 48px
 
   &__text
     color: $white
