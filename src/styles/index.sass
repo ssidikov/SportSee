@@ -22,3 +22,19 @@ body
     overflow: hidden
     padding-left: 12.5vw
     padding-top: 12.5vw
+
+@media (max-width: 768px)
+  .app-container
+    padding-left: 6rem
+    padding-right: 1rem
+    padding-top: 90px // Adjusted for fixed header/sidebar
+
+@media (max-width: 600px)
+  .app
+    min-height: 100dvh // Use dynamic viewport height
+  .app-container
+    padding: 70px 0.5rem 0.5rem 0.5rem // Adjusted for fixed header/sidebar
+    min-width: 0
+    margin: 0 // Remove potential desktop margins
+    max-width: 100vw // Ensure it doesn't exceed viewport
+    border-radius: 0 // Full screen on mobile

@@ -35,3 +35,30 @@
         font-weight: 600
         font-size: 20px
         text-align: center
+
+@media (max-width: 768px)
+    .daily-activity-chart
+        height: 280px // Adjust height for tablets
+        &__title
+            font-size: 14px
+            top: 30px
+            margin-left: 15px
+        &__container
+            height: calc(100% - 40px) // Adjust container height
+        &__legend
+            margin-right: 15px
+            font-size: 13px // Adjust legend font size
+
+@media (max-width: 600px)
+    .daily-activity-chart
+        height: 240px // Adjust height for mobile
+        padding: 10px // Add some padding to the chart itself
+        &__title
+            font-size: 13px
+            top: 15px // Adjust title position
+            margin-left: 10px
+        &__container
+            height: calc(100% - 25px) // Adjust container height
+        &__legend
+            margin-right: 10px
+            font-size: 12px // Adjust legend font size

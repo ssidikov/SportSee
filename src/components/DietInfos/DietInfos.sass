@@ -28,3 +28,23 @@
     font-size: clamp(0.6875rem, 0.4659rem + 0.4545vw, 0.875rem)
     font-weight: 500
     margin: 0
+
+@media (max-width: 768px)
+    .diet-info
+        width: calc(50% - 8px) // Two items per row if space allows in a flex-wrap container
+        height: auto // Adjust height automatically
+        padding: 20px
+        gap: 16px
+        &__icon
+            width: 48px
+            height: 48px
+
+@media (max-width: 600px)
+    .diet-info
+        width: 100% // Full width to stack vertically
+        max-width: 300px // Optional: prevent excessive width on wide mobile if centered
+        padding: 15px
+        gap: 10px
+        &__icon
+            width: 40px
+            height: 40px

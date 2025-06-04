@@ -95,3 +95,51 @@
   100%
     transform: translateY(0)
     opacity: 1
+
+@media (max-width: 768px)
+  .home
+    padding: 1rem
+  .home__intro
+    flex-direction: column
+    align-items: flex-start
+    gap: 1rem
+  .home__intro-title
+    font-size: clamp(1.3rem, 2.5vw, 3rem)
+  .home__user-title
+    font-size: 1.5rem
+  .home__user-subtitle
+    font-size: 1rem
+  .home__user-cards
+    justify-content: center // Center cards if they don't fill width
+  .home__user-card
+    width: clamp(150px, 40vw, 180px) // Responsive width for cards
+    padding: 15px
+    .home__user-avatar
+      width: 80px
+      height: 80px
+    .home__user-name
+      font-size: clamp(1rem, 1.2rem, 1.5rem)
+
+@media (max-width: 600px)
+  .home
+    padding: 0.5rem
+  .home__intro-title
+    font-size: clamp(1.2rem, 4vw, 2.5rem)
+  .home__user-title
+    font-size: 1.3rem
+  .home__user-subtitle
+    font-size: 0.9rem
+  .home__user-card
+    width: 100% // Full width for stacking
+    flex-direction: row // Keep avatar and name in a row but allow wrapping if needed
+    justify-content: flex-start
+    gap: 1rem
+    padding: 10px
+    .home__user-avatar
+      width: 60px
+      height: 60px
+      margin-bottom: 0
+    .home__user-info
+      text-align: left
+    .home__user-name
+      font-size: clamp(1rem, 1.1rem, 1.3rem)

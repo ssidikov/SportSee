@@ -16,6 +16,10 @@
     .header__logo-image
       max-width: 150px
       height: auto
+      @media (max-width: 768px)
+        max-width: 120px
+      @media (max-width: 480px)
+        max-width: 100px
 
   &__nav
     flex-grow: 1
@@ -25,9 +29,19 @@
       justify-content: space-evenly
       align-items: center
       list-style: none
+      @media (max-width: 768px)
+        justify-content: space-around
+      @media (max-width: 480px)
+        // On very small screens, consider making nav items stack or scroll
+        // For now, just reduce spacing further
+        gap: 0.5rem // Add gap for flex items
 
     &-item
       margin: 0 15px
+      @media (max-width: 768px)
+        margin: 0 8px
+      @media (max-width: 480px)
+        margin: 0 5px
 
     &-link
       color: $white

@@ -13,8 +13,17 @@
     padding: 10px
     flex: 1
     @media screen and (max-width: 780px)
-        flex: none
-    // width: 30%
+        flex: none // Existing rule
+        width: calc(50% - 8px) // Allow two charts per row
+        max-width: 220px
+        height: 220px
+
+    @media screen and (max-width: 600px)
+        width: 100% // Full width to stack
+        max-width: 258px
+        height: 230px // Adjust height for mobile
+        &__axis
+            font-size: 10px // Smaller font for axis labels
 
     &__container
         width: 100%

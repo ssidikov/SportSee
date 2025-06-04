@@ -37,12 +37,57 @@
   &__icon
     width: 64px
     height: 64px
-    @media (max-width: 780px)
-      width: 48px
-      height: 48px
+    @media (max-width: 1024px) // Changed from 780px for earlier switch to horizontal
+      width: 56px
+      height: 56px
+    @media (max-width: 768px)
+      width: 32px
+      height: 32px
+    @media (max-width: 600px)
+      width: 28px
+      height: 28px
 
   &__text
     color: $white
     writing-mode: vertical-rl
     transform: rotate(180deg)
     font-size: 14px
+    @media (max-width: 1024px) // Added for horizontal layout
+      // writing-mode: horizontal-tb
+      // transform: none
+      font-size: 12px
+      margin-left: 0.5rem
+    @media (max-width: 600px)
+      font-size: 10px
+    //   display: none // Hide text on very small screens if icons are clear enough
+
+// Rules for horizontal sidebar layout (previously might have been mixed with icon sizes)
+// @media (max-width: 768px)
+//   .sidebar
+//     // flex-direction: row
+//     height: 60px // Reduced height for top bar
+//     width: 100vw
+//     left: 0
+//     top: 0
+//     bottom: auto
+//     right: 0
+//     padding: 0 1rem // Adjusted padding
+//     position: fixed
+//     z-index: 1001 // Ensure it's above header if they overlap
+//     justify-content: space-around // Better distribution for nav items
+//     align-items: center
+//     &__nav
+//       width: auto
+//       flex-grow: 0 // Don't let nav grow too much
+//     &__list
+//       // flex-direction: row
+//       justify-content: center
+//       align-items: center
+//       gap: 1.5rem // Spacing between icons
+//     &__link
+//       padding: 5px // Smaller padding for links
+//     &__text // Ensure text is handled in horizontal mode
+//       writing-mode: horizontal-tb
+//       transform: none
+//       font-size: 12px
+//       margin-left: 0.5rem

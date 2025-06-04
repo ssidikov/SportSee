@@ -4,17 +4,32 @@
     width: 100%
     @media (max-width: 920px)
         margin-left: 1rem
+    @media (max-width: 768px)
+        margin-left: 0 // Remove margin if sidebar is on top
+        padding: 0 1rem // Add padding for content
+    @media (max-width: 600px)
+        padding: 0 0.5rem // Smaller padding for mobile
 
     &-title
         font-size: clamp(1.5rem, -0.2727rem + 3.6364vw, 3rem)
         margin-bottom: 41px
         font-weight: 500
         line-height: 24px
+        @media (max-width: 768px)
+            font-size: clamp(1.3rem, -0.2rem + 3vw, 2.5rem)
+            margin-bottom: 20px
+        @media (max-width: 600px)
+            font-size: clamp(1.2rem, -0.1rem + 2.5vw, 2rem)
+            margin-bottom: 15px
 
     &-text
         font-size: clamp(0.875rem, 0.5795rem + 0.6061vw, 1.125rem)
         font-weight: 400
         animation: fadeIn 1.5s ease-out
+        @media (max-width: 768px)
+            font-size: clamp(0.8rem, 0.5rem + 0.5vw, 1rem)
+        @media (max-width: 600px)
+            font-size: clamp(0.75rem, 0.45rem + 0.45vw, 0.9rem)
 
 .title--red
     color: #FF0101
@@ -24,3 +39,16 @@
     color: red
     font-weight: 600
     font-size: 20px
+
+.header__nav
+    @media screen and (max-width: 600px)
+        display: none // Hide the header navigation in profile page on mobile
+
+.sidebar
+    @media screen and (max-width: 600px)
+        display: none // Hide the sidebar in profile page on mobile
+
+.header
+    @media screen and (max-width: 600px)
+        justify-content: center
+        height: 60px // Center logo in header on mobile

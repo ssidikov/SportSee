@@ -9,7 +9,14 @@
     flex: 1
     @media screen and (max-width: 780px)
         flex: none
-    // width: 30%
+        width: calc(50% - 8px)
+        max-width: 220px
+        height: 220px
+
+    @media screen and (max-width: 600px)
+        width: 100%
+        max-width: 258px
+        height: 230px
 
     &__title
         position: absolute
@@ -17,6 +24,10 @@
         font-size: 15px
         margin: 30px 0 0 40px
         font-weight: 500
+
+        @media screen and (max-width: 600px)
+            margin: 20px 0 0 20px
+            font-size: 14px
 
     &__text-circle
         width: 130px
@@ -31,16 +42,26 @@
         align-items: center
         justify-content: center
 
+        @media screen and (max-width: 600px)
+            width: 100px
+            height: 100px
+
     &__text
         color: #74798C
         max-width: 70px
         text-align: center
         font-size: 16px
 
+        @media screen and (max-width: 600px)
+            font-size: 14px
+
         &--bold
             color: #282D30
             font-weight: 600
             font-size: 26px
+
+            @media screen and (max-width: 600px)
+                font-size: 22px
 
     &__error
         color: #FF0000
